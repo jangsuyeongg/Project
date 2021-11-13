@@ -15,33 +15,8 @@ Server : tomcat, node.js
 
 Version Control : Git
 
-# ⏰ 제작 기간 & 참여 인원
+# ⏰ 제작 기간
 2021년 10월 4일 ~ 2021년 10월 28일<br/>
-박동현, 김동현, 이영화, 장수영, 신이솜
-
-# 🕹 주요기능
-- 회원가입
-- 로그인
-- 마이페이지
-- 사이렌오더(웹 상품주문)
-- 가맹점 문의
-- 문의 채팅
-- 가맹점 상품발주
-- 본사 직원관리
-- 본사 협력업체관리
-- 본사 제품 관리(재고 관리)
-- 매출 현황
-
-# 📒 API 
-- summer note
-- kakao developers
-- naver developers
-- google developers
-- date picker
-- i'mport;
-- coolsms
-- Font Awesome
-- ePOST kr
 
 # 📕 구현화면
   포트폴리오.pdf를 확인해주세요.
