@@ -264,10 +264,7 @@ border-right:none;
 </head>
 <body>
    <div class="containers">
-         
-      
-         
-         <div class="imgdiv"/> <img src="img/ilustcut.png" /></div>
+         <div class="imgdiv"> <img src="img/ilustcut.png" /></div>
          <div class="formdiv">
             <form method="post" id="registerform" action="/myapp/registerOk" onsubmit="return allCheck()">
          <ul>
