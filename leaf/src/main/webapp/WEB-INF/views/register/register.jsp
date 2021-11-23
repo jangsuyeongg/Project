@@ -7,27 +7,6 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="//code.jquery.com/ui/1.8.18/themes/base/jquery-ui.css" />
-
-<script>
-	function allCheck(){
-		console.log(iddoublecheck+","+pwdDoubleCheck+","+emailCheck);
-		if(iddoublecheck==1&&pwdDoubleCheck==1&&emailCheck==1){
-			return true;
-		}
-		location.href='#userid'; 
-		return false;
-	};
-$(()=>{
-	
-		
-// 	console.log(idDoubleCheck+","+pwdDoubleCheck+","+emailCheck);
-// 	if(idDoubleCheck==1&&pwdDoubleCheck==1&& emailCheck==1){
-// 		return false;
-// 	}else{
-// 		return false;
-// 	}
-	});
-</script>
 <style>
 
    ul,li{margin:0; padding:0; list-style:none;}
@@ -261,82 +240,29 @@ border-right:none;
  .inp:focus { outline: none; background-color: #eee; } 
 </style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-</head>
-<body>
-   <div class="containers">
-         <div class="imgdiv"> <img src="img/ilustcut.png" /></div>
-         <div class="formdiv">
-            <form method="post" id="registerform" action="/myapp/registerOk" onsubmit="return allCheck()">
-         <ul>
-            <li><label class="label">아이디 <span>*</span></label><input type="text" name="userid" id="userid" class="inputBox"/>
-                  <input type="button" id="idChk" value="아이디중복검사"/><br/>
-                  <div class="id1"></div>
-                  
-                  </li>
-            <li><label class="label">비밀번호 <span>*</span></label><input type="password" name="userpwd" id="userpwd" class="inputBox inputBoxLong"/>
-               <div class="pw1"></div></li>
-            <li><label class="label">비밀번호확인 <span>*</span></label><input type="password" name="userpwdchk" id="userpwdchk" class="inputBox inputBoxLong"/>
-               <div class="pw2"></div></li>
-                  
-            <li><label class="label">이름 <span>*</span></label><input type="text" name="username" id="username" class="inputBox"/>
-                  <input type="radio" name="gender" value="남" checked="checked"/>남
-                  <input type="radio" name="gender" value="여"/> 여</li>
-            <li>
-               <label class="label">생년월일</label>
-               <input name="publeYear" autocomplete="off" readonly="readonly">
-               
-            </li>
-            <li><label class="label">전화번호</label>
-               
-               <input type="text" name="tel1" id="tel1" class="tel" maxlength='3' onKeyup="this.value=this.value.replace(/[^0-9]/g,'');"/> <!-- 숫자외 다른문자 입력시 자동으로 지워짐 -->
-               <input type="text" name="tel2" id="tel2" class="tel" maxlength='4' onKeyup="this.value=this.value.replace(/[^0-9]/g,'');"/>
-               <input type="text" name="tel3" id="tel3" class="tel" maxlength='4' onKeyup="this.value=this.value.replace(/[^0-9]/g,'');"/>
-               
-            </li>
-            
-            <li><label class="label">우편번호</label><input type="text" name="addr1" id="addr1" class="inputBox"/>
-            <input type="button" onclick="sample6_execDaumPostcode()" id="zipSearch" value="우편번호찾기"/>
-            </li>
-            <li><label class="label">주소</label><input type="text" name="addr2" id="addr2" class="inputBox inputBoxLong"/></li>
-            <li><label class="label">상세주소</label><input type="text" name="addr3" id="addr3" class="inputBox inputBoxLong"/></li>
-            <li><label class="label">참고항목</label><input type="text" name="addr4" id="addr4" class="inputBox inputBoxLong"></li>
-            <li style="height: 40px;"><label class="label">이메일</label><input type="text" id="emailid" name="emailid" class="inputBox inputBoxShort"/>@
-            <input type="text" name="domain" id="domain" class="inputBox inputBoxShort">
-            <input type="button" name="emailConfirm" id="emailConfirm" value="인증번호발송"/>
-            </li>
-            <li id="emailCheck" style="display:none;"><input style="margin-left: 120px;
-    margin-bottom: 20px;" id="email"type="text" name="emailCheck"  class="inputBox inputBoxLong" placeholder="인증번호 입력"><br/><div class="mail"></div></li>
-            <li id="joinbtn"><input type="submit" value="가입하기"class="join" /></li>
-     	 </ul>
-      </form>
-      <div class="emailCheck"></div>
-      </div><!--formdiv  -->
-   </div><!-- container -->
-      <div class="footer">
-        <div class="footer_inner">
-            <!--[주]고객센터,제휴문의,서비스안내-->
-            <ul class="footer_link" id="footer_link">
-                <li><a target="_blank" class="footer_item" href="http://www.naver.com/rules/service.html"
-                       id="fot.agreement"><span class="text">이용약관</span></a></li>
-                <li><a target="_blank" class="footer_item" href="http://www.naver.com/rules/privacy.html"
-                       id="fot.privacy"><span class="text">개인정보처리방침</span></a></li>
-                <li><a target="_blank" class="footer_item" href="http://www.naver.com/rules/disclaimer.html"
-                       id="fot.disclaimer"><span class="text">책임의 한계와 법적고지</span></a></li>
-                <li><a target="_blank" class="footer_item"
-                       href="https://help.naver.com/support/service/main.nhn?serviceNo=532" id="fot.help"><span
-                                class="text">회원정보 고객센터</span></a></li>
-            </ul>
-            <div class="footer_copy">
-                    <span class="footer_logo"><span class="blind">LEAF</span></span>
-                <span class="text">Copyright</span>
-                <span class="corp">© leaf Corp.</span>
-                <span class="text">All Rights Reserved.</span>
-            </div>
-        </div>
-    </div>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script src="//code.jquery.com/ui/1.8.18/jquery-ui.min.js"></script>
 
+<script>
+	function allCheck(){
+		console.log(iddoublecheck+","+pwdDoubleCheck+","+emailCheck);
+		if(iddoublecheck==1&&pwdDoubleCheck==1&&emailCheck==1){
+			return true;
+		}
+		location.href='#userid'; 
+		return false;
+	};
+$(()=>{
+	
+		
+// 	console.log(idDoubleCheck+","+pwdDoubleCheck+","+emailCheck);
+// 	if(idDoubleCheck==1&&pwdDoubleCheck==1&& emailCheck==1){
+// 		return false;
+// 	}else{
+// 		return false;
+// 	}
+	});
+</script>
 <script>
 var idcheck =0;
 var iddoublecheck=0;
@@ -496,8 +422,6 @@ var emailCheck = 0;
 		
 	});	
 });
-
-
 </script>
 <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 <script>
@@ -550,13 +474,79 @@ var emailCheck = 0;
             }
         }).open();
     }
-
-	
 </script>
-
-
-
-
+</head>
+<body>
+   <div class="containers">
+         <div class="imgdiv"> <img src="img/ilustcut.png" /></div>
+         <div class="formdiv">
+            <form method="post" id="registerform" action="/myapp/registerOk" onsubmit="return allCheck()">
+         <ul>
+            <li><label class="label">아이디 <span>*</span></label><input type="text" name="userid" id="userid" class="inputBox"/>
+                  <input type="button" id="idChk" value="아이디중복검사"/><br/>
+                  <div class="id1"></div>
+                  
+                  </li>
+            <li><label class="label">비밀번호 <span>*</span></label><input type="password" name="userpwd" id="userpwd" class="inputBox inputBoxLong"/>
+               <div class="pw1"></div></li>
+            <li><label class="label">비밀번호확인 <span>*</span></label><input type="password" name="userpwdchk" id="userpwdchk" class="inputBox inputBoxLong"/>
+               <div class="pw2"></div></li>
+                  
+            <li><label class="label">이름 <span>*</span></label><input type="text" name="username" id="username" class="inputBox"/>
+                  <input type="radio" name="gender" value="남" checked="checked"/>남
+                  <input type="radio" name="gender" value="여"/> 여</li>
+            <li>
+               <label class="label">생년월일</label>
+               <input name="publeYear" autocomplete="off" readonly="readonly">
+               
+            </li>
+            <li><label class="label">전화번호</label>
+               
+               <input type="text" name="tel1" id="tel1" class="tel" maxlength='3' onKeyup="this.value=this.value.replace(/[^0-9]/g,'');"/> <!-- 숫자외 다른문자 입력시 자동으로 지워짐 -->
+               <input type="text" name="tel2" id="tel2" class="tel" maxlength='4' onKeyup="this.value=this.value.replace(/[^0-9]/g,'');"/>
+               <input type="text" name="tel3" id="tel3" class="tel" maxlength='4' onKeyup="this.value=this.value.replace(/[^0-9]/g,'');"/>
+               
+            </li>
+            <li><label class="label">우편번호</label><input type="text" name="addr1" id="addr1" class="inputBox"/>
+            <input type="button" onclick="sample6_execDaumPostcode()" id="zipSearch" value="우편번호찾기"/>
+            </li>
+            <li><label class="label">주소</label><input type="text" name="addr2" id="addr2" class="inputBox inputBoxLong"/></li>
+            <li><label class="label">상세주소</label><input type="text" name="addr3" id="addr3" class="inputBox inputBoxLong"/></li>
+            <li><label class="label">참고항목</label><input type="text" name="addr4" id="addr4" class="inputBox inputBoxLong"></li>
+            <li style="height: 40px;"><label class="label">이메일</label><input type="text" id="emailid" name="emailid" class="inputBox inputBoxShort"/>@
+            <input type="text" name="domain" id="domain" class="inputBox inputBoxShort">
+            <input type="button" name="emailConfirm" id="emailConfirm" value="인증번호발송"/>
+            </li>
+            <li id="emailCheck" style="display:none;"><input style="margin-left: 120px;
+    margin-bottom: 20px;" id="email"type="text" name="emailCheck"  class="inputBox inputBoxLong" placeholder="인증번호 입력"><br/><div class="mail"></div></li>
+            <li id="joinbtn"><input type="submit" value="가입하기"class="join" /></li>
+     	 </ul>
+      </form>
+      <div class="emailCheck"></div>
+      </div><!--formdiv  -->
+   </div><!-- container -->
+      <div class="footer">
+        <div class="footer_inner">
+            <!--[주]고객센터,제휴문의,서비스안내-->
+            <ul class="footer_link" id="footer_link">
+                <li><a target="_blank" class="footer_item" href="http://www.naver.com/rules/service.html"
+                       id="fot.agreement"><span class="text">이용약관</span></a></li>
+                <li><a target="_blank" class="footer_item" href="http://www.naver.com/rules/privacy.html"
+                       id="fot.privacy"><span class="text">개인정보처리방침</span></a></li>
+                <li><a target="_blank" class="footer_item" href="http://www.naver.com/rules/disclaimer.html"
+                       id="fot.disclaimer"><span class="text">책임의 한계와 법적고지</span></a></li>
+                <li><a target="_blank" class="footer_item"
+                       href="https://help.naver.com/support/service/main.nhn?serviceNo=532" id="fot.help"><span
+                                class="text">회원정보 고객센터</span></a></li>
+            </ul>
+            <div class="footer_copy">
+                    <span class="footer_logo"><span class="blind">LEAF</span></span>
+                <span class="text">Copyright</span>
+                <span class="corp">© leaf Corp.</span>
+                <span class="text">All Rights Reserved.</span>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
