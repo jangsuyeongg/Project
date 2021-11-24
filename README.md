@@ -21,3 +21,6 @@ Version Control : Git
 # 📕 구현화면
   포트폴리오.pdf를 확인해주세요.
   노션 프로젝트 포트폴리오 https://octagonal-saguaro-5b7.notion.site/3fd9bee1a6934392bed6b1351a64a35b
+
+# 📕 발표영상
+  https://www.youtube.com/watch?v=RN_57__vnU8
