@@ -8,11 +8,10 @@
 		values(#{userid},#{userpwd},#{username},#{birth},#{tel},#{email},#{addr}, 'member')
 	
 	</insert>
-	
+	<!-- 아이디찾기 -->
 	<select id="idCheck" parameterType="String" resultType="int">
 		select count(userid) from registers where userid=#{param1}
-	
-	</select> <!-- 아이디찾기 -->
+	</select>
 	
 	<select id="sendNumber" resultType="String">
 		select userid from registers where tel=#{param1} and username=#{param2}

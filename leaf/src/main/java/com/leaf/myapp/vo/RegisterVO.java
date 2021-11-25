@@ -159,6 +159,7 @@ public class RegisterVO {
 		addr3=a[2];
 		addr4=a[3];
 	}
+	
 	public String getAddr1() {
 		return addr1;
 	}

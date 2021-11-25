@@ -266,7 +266,7 @@ $(()=>{
 <script>
 var idcheck =0;
 var iddoublecheck=0;
-
+;
 const config = {
       dateFormat: 'yy-mm-dd',
       showOn : "button",
@@ -303,7 +303,7 @@ const config = {
          $(function(){
             $("#idChk").click(function(){
                if(idcheck!=0){
-            	var datas="userid="+$("#userid").val().trim();
+            	var datas="userid="+$("#userid").val().trim(); // trim - 공백제거
                   //console.log(datas);//고구마들어옴.
                $.ajax({
                   url:"/myapp/idCheck",
@@ -362,9 +362,9 @@ var emailCheck = 0;
                    $(".pw1").attr("style","color:green").css("margin-left","120px").css("margin-top","-20px");
                    pwdCheck = 1;
                 }
-
             });
          });
+            //
 
 //비밀번호 확인
          
@@ -548,5 +548,4 @@ var emailCheck = 0;
         </div>
     </div>
 </body>
-
 </html>
