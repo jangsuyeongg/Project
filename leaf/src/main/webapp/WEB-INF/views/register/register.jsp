@@ -364,11 +364,8 @@ var emailCheck = 0;
                 }
             });
          });
-            //
 
 //비밀번호 확인
-         
-         
          $(function(){
              $('#userpwdchk').keyup(function(){
             	 if(pwdCheck==1){
